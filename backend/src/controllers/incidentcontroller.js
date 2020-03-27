@@ -25,7 +25,6 @@ module.exports = {
 
         const [count] = await connection('incidents')
             .count()
-        console.log(count)
 
         const incidents = await connection('incidents')
             .join('ongs', 'ong_id', '=', 'incidents.ong_id')
